@@ -27,7 +27,7 @@ class Clock extends React.Component{
   }
 }
 
-const Clockcomponent=new Clock();
+// const Clockcomponent=new Clock();
 ReactDOM.createRoot(document.getElementById('root')).render(
   // Clockcomponent.print(),document.getElementById('root')
   <React.StrictMode>
