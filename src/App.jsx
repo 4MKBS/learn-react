@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Clock from './components/Clock.jsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,7 +9,17 @@ function App() {
 
   return (
     <>
-      <div>
+      <div> <Clock local='bn-BD'>হায়রে</Clock></div>
+    </>
+  )
+}
+
+export default App
+
+
+
+
+{/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -28,10 +39,4 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <p>hi i am mkbs <div className="ok">so funny</div></p>
-
-    </>
-  )
-}
-
-export default App
+      <p>hi i am mkbs <div className="ok">so funny</div></p> */}
