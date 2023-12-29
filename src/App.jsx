@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div> <Clock local='bn-BD'>হায়রে</Clock></div>
+      <div> <Clock>হায়রে</Clock></div>
     </>
   )
 }
