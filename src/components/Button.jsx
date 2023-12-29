@@ -1,15 +1,21 @@
 import React from "react";
 
 class Button extends React.Component {
-  // state = { counter: 0 };
-  // handleClick = () => {
-  //   this.setState((prevState) => ({
-  //     counter: prevState.counter + 1,
-  //   }));
-  // };
+  shouldComponentUpdate(nextProps) {
+    const { change:currentChange} = this.props;
+    const { change: nextChange } = nextProps;
+    if(currentChange === nextChange){
+      return false;
+    }
+    return true;
+  }
   render() {
+    console.log("button render");
+    const { change,local} = this.props;
     return(
-      <button onClick={this.props.onClickFunction}>
+      <button onClick={()=>{
+        change(local);
+      }}>
         Click me
       </button>
     );
