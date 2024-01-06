@@ -1,15 +1,8 @@
 import React from 'react'
 import Button from './Button'
 
-// let a=React.createElement('div',null,'hello world');
-// little bilding block of react is element
-
 class Clock extends React.Component{
-    // constructor(props){
-    //     super(props);
-    //     this.state={date:new Date()};
-    // } //when we need to use props in constructor then we need to pass props in constructor and supers
-    state={date:new Date(), local:'bn-BD'};
+    state={date:new Date(),local:'bn-BD'};
     componentDidMount(){
       this.clockTimer= setInterval(()=>this.tick(),1000);
     }
@@ -22,15 +15,27 @@ class Clock extends React.Component{
       );
     }
     handleClick=(local)=>{
-      console.log("button clicked");
       this.setState({local:local});
-      // this.setState({local:'en-US'});
     }
     render(){
-      console.log("clock render");
         const {date, local}=this.state;
-        // const {local}=this.props;
         const {children}=this.props;
+
+      // let mybutton;
+      // if(local==='bn-BD'){
+      //   mybutton=(
+      //   <Button change={this.handleClick} local='ar-SA'>
+      //      Click me to AR
+      //   </Button>
+      //   );
+      // }else{
+      //   mybutton=(
+      //   <Button change={this.handleClick} local='bn-BD'>
+      //      Click me to BN
+      //   </Button>
+      //   );
+      // }
+
       return(
         <div>
           <h2>Hello  World</h2>
@@ -40,12 +45,13 @@ class Clock extends React.Component{
 
           
           <h1 className='h1'><span>YOOO - {children } {date.toLocaleTimeString(local)}</span></h1>
-         {/* <button onClick={this.handleClick}>THIS IS BUTTON</button> */}
-         <Button change={this.handleClick} local='ar-SA'> Click me </Button>
-         {/* <button onClick={this.handleClick.bind(this,'en-US')}>THIS IS BUTTON</button> */}
+         {local === 'bn-BD' ?(
+          <Button change={this.handleClick} local='ar-SA' show={false} enable />
+         ):(
+          <Button change={this.handleClick} local='bn-BD' show enable />
+         )}
         </div>
       );
     }
   }
   export default Clock;
-  // const Clockcomponent=new Clock();
