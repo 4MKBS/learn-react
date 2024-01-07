@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Clock from './components/Clock.jsx'
 import ClockList from './components/ClockList.jsx'
+import Form from './components/Form.jsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <div>
+        <Form />
         <ClockList quantities={quantities} />
       </div>
     </>
