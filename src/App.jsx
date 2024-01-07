@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import Clock from './components/Clock.jsx'
+import ClockList from './components/ClockList.jsx'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const quantities=[1,2,3];
   return (
     <>
-      <div> <Clock>🥰🥰🥰</Clock></div>
+      <div>
+        <ClockList quantities={quantities} />
+      </div>
     </>
   )
 }
