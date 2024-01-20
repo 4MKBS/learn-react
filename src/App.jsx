@@ -1,10 +1,10 @@
-import Calculator from "./components/Calculator";
+import Text from "./components/inheritance/Text";
 
 function App(){
     return (
         <div>
             <h1>Hello World</h1>
-            <Calculator />
+            <Text />
         </div>
     )
 }
