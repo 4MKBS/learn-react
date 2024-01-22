@@ -6,18 +6,26 @@ import Counter from "./components/Counter";
 
 
 
-function App(){
+function App() {
     return (
         <div className="app">
-           <h1>Hello MARS</h1>
-           {/* <ClickCounter />
+            <h1>Hello MARS</h1>
+            {/* <ClickCounter />
            <HoverCounter />
             */}
-           <Counter render={(count,increment)=>(<ClickCounter count={count} increment={increment} />)} />
+            <Counter>
+                {(count, increment) => (
+                    <ClickCounter count={count} increment={increment} />
+                )}
+            </Counter>
 
-           <Counter render={(count,increment)=>(<HoverCounter count={count} increment={increment} />)} />
+            <Counter>
+                {(count, increment) => (
+                    <HoverCounter count={count} increment={increment} />
+                )}
+            </Counter>
 
-           <User render={(islogin)=> islogin?'SAKIB':'Ghost'} />
+            <User render={(islogin) => islogin ? 'SAKIB' : 'Ghost'} />
 
         </div>
     )

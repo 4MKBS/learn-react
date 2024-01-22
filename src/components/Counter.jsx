@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 
 export default class Counter extends React.Component{
     state = {
@@ -8,8 +8,8 @@ export default class Counter extends React.Component{
         this.setState((prevState)=>({count:prevState.count+1}));
     };
     render(){
-        const {render}=this.props;
+        const {children}=this.props;
         const {count}=this.state;
-        return render(count,this.increment);
+        return children(count,this.increment);
     }
 }
