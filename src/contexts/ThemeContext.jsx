@@ -1,7 +1,7 @@
-import createContext from "../lib/Context";
-
-const ThemeContext = createContext({
-    theme:'light',//deault value
+import React from "react";
+const ThemeContext = React.createContext({
+    theme: "light",
+    
 });
 
 export default ThemeContext;

@@ -8,9 +8,9 @@ export default function Content() {
             <h1>This is content</h1>
             <Counter>
                 {(count, increment) => {
-                    return <ThemeContext.Comsumer>
+                    return <ThemeContext.Consumer>
                         {({theme})=><HoverCounter theme={theme} count={count} increment={increment} />}
-                    </ThemeContext.Comsumer>
+                    </ThemeContext.Consumer>
                 }}
             </Counter>
         </div>

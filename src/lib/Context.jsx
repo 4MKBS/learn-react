@@ -10,14 +10,14 @@ class Context{
     }
 
     //consumer
-    Comsumer = ({children})=> children(this.value);
+    Consumer = ({children})=> children(this.value);
 }
 
 function createContext(value = null){
     const context = new Context(value);
     return {
         Provider: context.Provider,
-        Comsumer: context.Comsumer,
+        Consumer: context.Consumer,
     }
 
 }
